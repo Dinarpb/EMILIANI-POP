@@ -10,7 +10,7 @@ while ($rowa = $conectarb->fetch_assoc() ) {
   $pop = $rowa['Img'];
 }
 ?>
-
+<!-- Ojitosssss -->
 
 <!doctype html>
 <html lang="en">
