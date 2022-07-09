@@ -70,16 +70,17 @@
                             <tbody>
                                 <?php
                                     include("index.php");
-                                    $query = "SELECT * FROM imagenes where Id = 2";
+                                    $query = "SELECT * FROM imagenes where id = 2";
+                                    
                                     $resultado= mysqli_query($conexion,$query) or die ($conexion->error);
                                     while($row = $resultado->fetch_assoc()){
                                 ?>
                                     <tr class="bg-active">
                                         <center>
-                                        <td><center><?php echo $row['Id']; ?></center></td>
+                                        <td><center><?php echo $row['id']; ?></center></td>
                                         <td><center><?php echo $row['Nombre']; ?></td>
-                                        <td align="center"><img width="100%" src="<?php echo $row['Img']; ?>"/></td>
-                                        <td><center><a href="modificar_img.php?id=<?php echo $row['Id'];?>">Cambiar</a></center></td>
+                                        <td align="center"><img width="100%" src="<?= $row['Img']; ?>"/></td>
+                                        <td><center><a href="modificar_img.php?id=<?php echo $row['id'];?>">Cambiar</a></center></td>
                                     </tr>
                                 <?php
                                     }
