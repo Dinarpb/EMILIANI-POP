@@ -1,6 +1,5 @@
-<?php
-    include("index.php");
-
+<?php  
+    include("partepop.php");
     if(isset($_GET['id'])){
         $id = $_GET['id'];
         $query= "SELECT * FROM imagenes WHERE id=$id";
@@ -34,13 +33,13 @@
                 <form action="modificar_img.php?id=<?php echo $_GET['id']; ?>" method="POST">
 
                     <div class="form-group">
-                        <input type="text" name="Nombre" value="<?php echo $nombre ?>"
-                        class="form-control" placeholder="Actualizar titulo">
+                        <input type="text" required name="Nombre" value="<?php echo $nombre ?>"
+                        class="form-control" placeholder="Nombre de la Imagen">
                     </div>
 
                     <div class="form-group">
-                        <textarea name="Img" rows="2" class="form-control"
-                        placeholder="Actualizar la descripción">
+                        <textarea name="Img" rows="2" required class="form-control"
+                        placeholder="URL de la Imagen">
                             <?php echo $img ?>
                         </textarea>
                     </div>

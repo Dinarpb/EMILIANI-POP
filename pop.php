@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,15 +37,6 @@
     <!-- ======= Breadcrumbs ======= -->
     <section class="breadcrumbs">
       <div class="container">
-
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Pop-pop</h2>
-          <ol>
-            <li><a href="index.html">Cuenta</a></li>
-            <li>Pop-pop</li>
-          </ol>
-        </div>
-
       </div>
     </section><!-- End Breadcrumbs -->
 
@@ -69,7 +62,7 @@
 
                             <tbody>
                                 <?php
-                                    include("index.php");
+                                    include("partepop.php");
                                     $query = "SELECT * FROM imagenes where id = 2";
                                     
                                     $resultado= mysqli_query($conexion,$query) or die ($conexion->error);
